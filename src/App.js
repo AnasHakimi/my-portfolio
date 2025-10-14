@@ -1,17 +1,8 @@
-/*
-  Enhanced Portfolio React component with modern UI
-  - Added animations and micro-interactions
-  - Improved visual hierarchy and spacing
-  - Gradient backgrounds and glass morphism effects
-  - Enhanced project cards and hover effects
-  - Smooth scrolling and transitions
-*/
-
 import React, { useState, useEffect } from "react";
 import { Mail, Github, Linkedin, ExternalLink, Code, Sun, Moon, Menu, X, ChevronDown, Sparkles } from "lucide-react";
 
 export default function Portfolio() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(true);
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
@@ -41,45 +32,43 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: "Personal Portfolio Website",
-      desc: "Interactive, responsive portfolio built with React and Tailwind with modern UI/UX principles.",
-      tech: ["React", "Tailwind", "Framer Motion", "Vite"],
+      title: "Augmented Reality Educational Game for Waste Recycling",
+      desc: "My final year project at university was developed using Unity and Vuforia, with the modeling done in Blender. ",
+      tech: ["Unity", "Vuforia", "Blender", "Adobe Illustrator"],
       link: "#",
       github: "#",
-      featured: true
     },
     {
       id: 2,
-      title: "Game Demo (Unity WebGL)",
-      desc: "Low-poly AR educational demo with interactive elements exported to WebGL for browser play.",
-      tech: ["Unity", "C#", "WebGL", "AR Foundation"],
-      link: "#",
-      github: "#",
-      featured: true
+      title: "Virtual Shopping Simulation 3D Game using Unity",
+      desc: "In Semester 5, my group project for the subject Virtual Reality (CSC573) was a virtual shopping mini-game featuring an interactive UI/UX. ",
+      tech: ["Unity", "C#", "Blender", "Canva"],
+      link: "https://github.com/AnasHakimi/Shopping_Simulation/raw/main/Preview/2.png",
+      github: "https://github.com/AnasHakimi/Shopping_Simulation",
     },
     {
       id: 3,
-      title: "Mobile App Prototype",
-      desc: "Cross-platform mobile app prototype with focus on user experience and smooth animations.",
-      tech: ["Flutter", "Dart", "Firebase", "Figma"],
-      link: "#",
-      github: "#"
+      title: "Car Rental Mobile Application",
+      desc: "In Semester 4, my group project for the subject Mobile Programming (CSC557) required us to build a car rental app using Android Studio. ",
+      tech: ["Kotlin", "Android Studio", "Prostige", "Canva"],
+      link: "https://github.com/AnasHakimi/Car_Rental/raw/master/Preview/Login.png",
+      github: "https://github.com/AnasHakimi/Car_Rental"
     },
     {
       id: 4,
-      title: "E-commerce Dashboard",
-      desc: "Real-time analytics dashboard with data visualization and interactive charts.",
-      tech: ["React", "Node.js", "MongoDB", "Chart.js"],
-      link: "#",
-      github: "#"
+      title: "All-in-one Package Tracking System",
+      desc: "In Semester 4, my group project for the subject Enterprise Programming (CSC584) was developed using Eclipse IDE and XAMPP, with the real-time API integrated from www.tracking.my.",
+      tech: ["Eclipse IDE", "Apache Tomcat", "phpMyAdmin", "Java"],
+      link: "https://github.com/AnasHakimi/Package_Tracking/raw/main/PackageTracking/AIO%20package%20tracking/login.png",
+      github: "https://github.com/AnasHakimi/Package_Tracking"
     }
   ];
 
   const skills = [
-    { name: "Frontend", items: ["React", "Vue", "TypeScript", "Tailwind"] },
-    { name: "Mobile", items: ["Flutter", "React Native", "Kotlin"] },
-    { name: "Game Dev", items: ["Unity", "C#", "AR/VR", "WebGL"] },
-    { name: "Tools", items: ["Git", "Figma", "Docker", "AWS"] }
+    { name: "Frontend", items: ["Css", "React", "TypeScript", "Tailwind"] },
+    { name: "Mobile & Web Dev", items: ["Kotlin", "JavaEE", "Xampp", "PhpMyAdmin","Html"] },
+    { name: "Game Dev", items: ["Unity", "Construct 3", "AR/VR", "Vuforia", "C#"] },
+    { name: "Tools", items: ["Blender", "Figma", "Adobe Illustrator", "Canva"] }
   ];
 
   const contact = {
@@ -253,7 +242,7 @@ export default function Portfolio() {
                   <div className="mt-2 text-sm opacity-70">Frontend • Mobile • Game Dev</div>
                   
                   <div className="mt-6 flex justify-center gap-2">
-                    {["React", "Flutter", "Unity"].map((tech) => (
+                    {["React", "Kotlin", "Unity"].map((tech) => (
                       <span key={tech} className="text-xs px-2 py-1 rounded-full border border-opacity-20">
                         {tech}
                       </span>
@@ -348,13 +337,13 @@ export default function Portfolio() {
                       href={project.link} 
                       className="flex items-center gap-2 px-4 py-2 rounded-lg border border-opacity-20 hover:border-opacity-40 transition-all hover:scale-105"
                     >
-                      <ExternalLink size={16} /> Live Demo
+                      <ExternalLink size={16} /> Preview
                     </a>
                     <a 
                       href={project.github} 
                       className="flex items-center gap-2 px-4 py-2 rounded-lg border border-opacity-20 hover:border-opacity-40 transition-all hover:scale-105"
                     >
-                      <Code size={16} /> Code
+                      <Github size={16} /> GitHub
                     </a>
                   </div>
                 </div>
