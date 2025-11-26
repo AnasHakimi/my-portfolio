@@ -40,7 +40,7 @@ export default function Portfolio() {
     },
     {
       id: 2,
-      title: "SSM CSI Intelligence Assistant",
+      title: "Waste Recycling AR Educational Game",
       desc: "My final year project at university was developed using Unity and Vuforia, with the modeling done in Blender. ",
       tech: ["Unity", "Vuforia", "Blender", "Adobe Illustrator"],
       link: "#",
