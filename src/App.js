@@ -267,7 +267,13 @@ export default function Portfolio() {
                 ></div>
 
                 <div className="text-center relative z-10 p-8">
-                  <div className="text-6xl mb-4">👋</div>
+                  <div className="mb-4 relative w-32 h-32 mx-auto">
+                    <img
+                      src="/profile.png"
+                      alt="Anas Hakimi"
+                      className="w-full h-full object-cover rounded-full border-4 border-white border-opacity-20 shadow-lg"
+                    />
+                  </div>
                   <div className="font-semibold text-lg">Anas Hakimi</div>
                   <div className="mt-2 text-sm opacity-70">Frontend • Mobile • Game Dev</div>
 
