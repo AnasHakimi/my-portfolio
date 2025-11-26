@@ -208,7 +208,7 @@ export default function Portfolio() {
         {/* Enhanced HERO */}
         <section id="home" className="min-h-screen flex items-center pt-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
+            <div className="space-y-6 order-2 lg:order-1 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-opacity-20 text-sm">
                 <Sparkles size={16} />
                 <span>Available for employment opportunities</span>
@@ -227,7 +227,7 @@ export default function Portfolio() {
 
               <p className="text-lg opacity-80 leading-relaxed">{contact.bio}</p>
 
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
                 <a
                   href={contact.github}
                   target="_blank"
@@ -256,7 +256,7 @@ export default function Portfolio() {
               </div>
             </div>
 
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
               <div
                 className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl border-4 border-opacity-20 flex items-center justify-center overflow-hidden group"
                 style={{ borderColor: accent }}
@@ -269,7 +269,7 @@ export default function Portfolio() {
                 <div className="text-center relative z-10 p-8">
                   <div className="mb-4 relative w-32 h-32 mx-auto">
                     <img
-                      src="/profile.png"
+                      src={`${process.env.PUBLIC_URL}/profile.png`}
                       alt="Anas Hakimi"
                       className="w-full h-full object-cover rounded-full border-4 border-white border-opacity-20 shadow-lg"
                     />
