@@ -269,7 +269,7 @@ export default function Portfolio() {
                 <div className="text-center relative z-10 p-8">
                   <div className="mb-4 relative w-32 h-32 mx-auto">
                     <img
-                      src="public/profile.png"
+                      src="/profile.png"
                       alt="Anas Hakimi"
                       className="w-full h-full object-cover rounded-full border-4 border-white border-opacity-20 shadow-lg"
                     />
