@@ -7,7 +7,7 @@ export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("home");
 
   const accent = "#fd7337";
-  const gradient = dark 
+  const gradient = dark
     ? `linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)`
     : `linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%)`;
 
@@ -32,7 +32,7 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: "Augmented Reality Educational Game for Waste Recycling",
+      title: "SSM CSI Intelligence Assistant",
       desc: "My final year project at university was developed using Unity and Vuforia, with the modeling done in Blender. ",
       tech: ["Unity", "Vuforia", "Blender", "Adobe Illustrator"],
       link: "#",
@@ -40,15 +40,15 @@ export default function Portfolio() {
     },
     {
       id: 2,
-      title: "Virtual Shopping Simulation 3D Game using Unity",
-      desc: "In Semester 5, my group project for the subject Virtual Reality (CSC573) was a virtual shopping mini-game featuring an interactive UI/UX. ",
-      tech: ["Unity", "C#", "Blender", "Canva"],
-      link: "https://github.com/AnasHakimi/Shopping_Simulation/raw/main/Preview/2.png",
-      github: "https://github.com/AnasHakimi/Shopping_Simulation",
+      title: "SSM CSI Intelligence Assistant",
+      desc: "My final year project at university was developed using Unity and Vuforia, with the modeling done in Blender. ",
+      tech: ["Unity", "Vuforia", "Blender", "Adobe Illustrator"],
+      link: "#",
+      github: "#",
     },
     {
       id: 3,
-      title: "Car Rental Mobile Application",
+      title: "Kitchenware Classification System",
       desc: "In Semester 4, my group project for the subject Mobile Programming (CSC557) required us to build a car rental app using Android Studio. ",
       tech: ["Kotlin", "Android Studio", "Prostige", "Canva"],
       link: "https://github.com/AnasHakimi/Car_Rental/raw/master/Preview/Login.png",
@@ -56,7 +56,39 @@ export default function Portfolio() {
     },
     {
       id: 4,
-      title: "All-in-one Package Tracking System",
+      title: "Food Preference Analysis System",
+      desc: "In Semester 4, my group project for the subject Enterprise Programming (CSC584) was developed using Eclipse IDE and XAMPP, with the real-time API integrated from www.tracking.my.",
+      tech: ["Eclipse IDE", "Apache Tomcat", "phpMyAdmin", "Java"],
+      link: "https://github.com/AnasHakimi/Package_Tracking/raw/main/PackageTracking/AIO%20package%20tracking/login.png",
+      github: "https://github.com/AnasHakimi/Package_Tracking"
+    },
+    {
+      id: 5,
+      title: "Virtual Shopping Simulation 3D Game using Unity",
+      desc: "In Semester 5, my group project for the subject Virtual Reality (CSC573) was a virtual shopping mini-game featuring an interactive UI/UX. ",
+      tech: ["Unity", "C#", "Blender", "Canva"],
+      link: "https://github.com/AnasHakimi/Shopping_Simulation/raw/main/Preview/2.png",
+      github: "https://github.com/AnasHakimi/Shopping_Simulation",
+    },
+    {
+      id: 6,
+      title: "Car Rental Mobile Application",
+      desc: "In Semester 4, my group project for the subject Mobile Programming (CSC557) required us to build a car rental app using Android Studio. ",
+      tech: ["Kotlin", "Android Studio", "Prostige", "Canva"],
+      link: "https://github.com/AnasHakimi/Car_Rental/raw/master/Preview/Login.png",
+      github: "https://github.com/AnasHakimi/Car_Rental"
+    },
+    {
+      id: 7,
+      title: "Courier Management System",
+      desc: "In Semester 4, my group project for the subject Enterprise Programming (CSC584) was developed using Eclipse IDE and XAMPP, with the real-time API integrated from www.tracking.my.",
+      tech: ["Eclipse IDE", "Apache Tomcat", "phpMyAdmin", "Java"],
+      link: "https://github.com/AnasHakimi/Package_Tracking/raw/main/PackageTracking/AIO%20package%20tracking/login.png",
+      github: "https://github.com/AnasHakimi/Package_Tracking"
+    },
+    {
+      id: 8,
+      title: "Sneakers.Co Ecommerse Website",
       desc: "In Semester 4, my group project for the subject Enterprise Programming (CSC584) was developed using Eclipse IDE and XAMPP, with the real-time API integrated from www.tracking.my.",
       tech: ["Eclipse IDE", "Apache Tomcat", "phpMyAdmin", "Java"],
       link: "https://github.com/AnasHakimi/Package_Tracking/raw/main/PackageTracking/AIO%20package%20tracking/login.png",
@@ -66,7 +98,7 @@ export default function Portfolio() {
 
   const skills = [
     { name: "Frontend", items: ["Css", "React", "TypeScript", "Tailwind"] },
-    { name: "Mobile & Web Dev", items: ["Kotlin", "JavaEE", "Xampp", "PhpMyAdmin","Html"] },
+    { name: "Mobile & Web Dev", items: ["Kotlin", "JavaEE", "Xampp", "PhpMyAdmin", "Html"] },
     { name: "Game Dev", items: ["Unity", "Construct 3", "AR/VR", "Vuforia", "C#"] },
     { name: "Tools", items: ["Blender", "Figma", "Adobe Illustrator", "Canva"] }
   ];
@@ -90,9 +122,8 @@ export default function Portfolio() {
 
   return (
     <div
-      className={`min-h-screen transition-colors duration-300 ${
-        dark ? "dark bg-gray-900 text-white" : "bg-white text-gray-900"
-      }`}
+      className={`min-h-screen transition-colors duration-300 ${dark ? "dark bg-gray-900 text-white" : "bg-white text-gray-900"
+        }`}
       style={{ background: gradient }}
     >
       {/* Animated background elements */}
@@ -106,9 +137,9 @@ export default function Portfolio() {
       <div className="relative max-w-6xl mx-auto px-4 py-6 z-10">
         {/* Enhanced NAV */}
         <header className="flex items-center justify-between py-4">
-          <a 
-            href="#" 
-            className="font-bold text-xl bg-clip-text text-transparent" 
+          <a
+            href="#"
+            className="font-bold text-xl bg-clip-text text-transparent"
             style={{ backgroundImage: `linear-gradient(45deg, ${accent}, ${dark ? '#818cf8' : '#3b82f6'})` }}
           >
             {contact.name.split(' ')[1]}
@@ -120,12 +151,11 @@ export default function Portfolio() {
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
-                className={`px-3 py-2 rounded-lg transition-all duration-200 ${
-                  activeSection === item 
-                    ? "text-white font-semibold scale-110" 
-                    : "opacity-70 hover:opacity-100"
-                }`}
-                style={{ 
+                className={`px-3 py-2 rounded-lg transition-all duration-200 ${activeSection === item
+                  ? "text-white font-semibold scale-110"
+                  : "opacity-70 hover:opacity-100"
+                  }`}
+                style={{
                   background: activeSection === item ? accent : 'transparent',
                   transform: activeSection === item ? 'translateY(-2px)' : 'none'
                 }}
@@ -133,7 +163,7 @@ export default function Portfolio() {
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </button>
             ))}
-            
+
             <button
               onClick={() => setDark(!dark)}
               className="p-2 rounded-lg border border-opacity-20 hover:border-opacity-40 transition-all duration-200 hover:scale-110"
@@ -144,8 +174,8 @@ export default function Portfolio() {
           </nav>
 
           <div className="md:hidden flex items-center gap-3">
-            <button 
-              onClick={() => setDark(!dark)} 
+            <button
+              onClick={() => setDark(!dark)}
               className="p-2 rounded-lg border border-opacity-20"
             >
               {dark ? <Sun size={18} /> : <Moon size={18} />}
@@ -190,7 +220,7 @@ export default function Portfolio() {
                   {contact.name.split(' ')[1]}
                 </span>
               </h1>
-              
+
               <p className="text-xl sm:text-2xl font-medium opacity-90" style={{ color: accent }}>
                 {contact.tagline}
               </p>
@@ -227,20 +257,20 @@ export default function Portfolio() {
             </div>
 
             <div className="flex justify-center lg:justify-end">
-              <div 
+              <div
                 className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl border-4 border-opacity-20 flex items-center justify-center overflow-hidden group"
                 style={{ borderColor: accent }}
               >
-                <div 
+                <div
                   className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-300"
                   style={{ background: accent }}
                 ></div>
-                
+
                 <div className="text-center relative z-10 p-8">
                   <div className="text-6xl mb-4">👋</div>
                   <div className="font-semibold text-lg">Anas Hakimi</div>
                   <div className="mt-2 text-sm opacity-70">Frontend • Mobile • Game Dev</div>
-                  
+
                   <div className="mt-6 flex justify-center gap-2">
                     {["React", "Kotlin", "Unity"].map((tech) => (
                       <span key={tech} className="text-xs px-2 py-1 rounded-full border border-opacity-20">
@@ -249,17 +279,17 @@ export default function Portfolio() {
                     ))}
                   </div>
                 </div>
-                
+
                 {/* Floating elements */}
                 <div className="absolute top-4 right-4 w-3 h-3 rounded-full animate-pulse" style={{ background: accent }}></div>
                 <div className="absolute bottom-6 left-6 w-2 h-2 rounded-full animate-pulse delay-300" style={{ background: accent }}></div>
               </div>
             </div>
           </div>
-          
+
           {/* Scroll indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <button 
+            <button
               onClick={() => scrollToSection('projects')}
               className="p-2 rounded-full border border-opacity-20 hover:border-opacity-40 transition-all"
             >
@@ -277,7 +307,7 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {skills.map((skillGroup, index) => (
-              <div 
+              <div
                 key={skillGroup.name}
                 className="p-6 rounded-2xl backdrop-blur-lg bg-white bg-opacity-5 border border-opacity-10 hover:border-opacity-30 transition-all duration-300 hover:scale-105"
                 style={{ animationDelay: `${index * 100}ms` }}
@@ -316,31 +346,31 @@ export default function Portfolio() {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
                   <p className="opacity-80 mb-4 leading-relaxed">{project.desc}</p>
-                  
+
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.tech.map((tech) => (
-                      <span 
-                        key={tech} 
+                      <span
+                        key={tech}
                         className="px-3 py-1 rounded-full text-sm border border-opacity-20"
                       >
                         {tech}
                       </span>
                     ))}
                   </div>
-                  
+
                   <div className="flex gap-4">
-                    <a 
-                      href={project.link} 
+                    <a
+                      href={project.link}
                       className="flex items-center gap-2 px-4 py-2 rounded-lg border border-opacity-20 hover:border-opacity-40 transition-all hover:scale-105"
                     >
                       <ExternalLink size={16} /> Preview
                     </a>
-                    <a 
-                      href={project.github} 
+                    <a
+                      href={project.github}
                       className="flex items-center gap-2 px-4 py-2 rounded-lg border border-opacity-20 hover:border-opacity-40 transition-all hover:scale-105"
                     >
                       <Github size={16} /> GitHub
@@ -371,7 +401,7 @@ export default function Portfolio() {
                       <div className="opacity-80">{contact.email}</div>
                     </div>
                   </a>
-                  
+
                   <a href={contact.github} target="_blank" rel="noreferrer" className="flex items-center gap-3 p-3 rounded-lg hover:bg-white hover:bg-opacity-5 transition-colors">
                     <Github size={20} />
                     <div>
@@ -379,7 +409,7 @@ export default function Portfolio() {
                       <div className="opacity-80">@{contact.github.split('/').pop()}</div>
                     </div>
                   </a>
-                  
+
                   <a href={contact.linkedin} target="_blank" rel="noreferrer" className="flex items-center gap-3 p-3 rounded-lg hover:bg-white hover:bg-opacity-5 transition-colors">
                     <Linkedin size={20} />
                     <div>
@@ -399,15 +429,15 @@ export default function Portfolio() {
                   className="p-4 rounded-xl backdrop-blur-lg bg-white bg-opacity-5 border border-opacity-10 focus:border-opacity-40 transition-all focus:scale-105"
                   required
                 />
-                <input 
-                  type="email" 
-                  placeholder="Your email" 
+                <input
+                  type="email"
+                  placeholder="Your email"
                   className="p-4 rounded-xl backdrop-blur-lg bg-white bg-opacity-5 border border-opacity-10 focus:border-opacity-40 transition-all focus:scale-105"
-                  required 
+                  required
                 />
               </div>
-              <textarea 
-                placeholder="Your message" 
+              <textarea
+                placeholder="Your message"
                 rows={6}
                 className="p-4 rounded-xl backdrop-blur-lg bg-white bg-opacity-5 border border-opacity-10 focus:border-opacity-40 transition-all focus:scale-105 w-full"
               />
