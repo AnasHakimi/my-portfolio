@@ -258,7 +258,7 @@ export default function Portfolio() {
 
             <div className="flex justify-center lg:justify-end order-1 lg:order-2">
               <div
-                className="relative w-72 h-auto py-6 sm:py-0 sm:w-80 sm:h-80 rounded-3xl border-4 border-opacity-20 flex items-center justify-center overflow-hidden group"
+                className="relative w-72 h-auto py-10 sm:py-0 sm:w-80 sm:h-80 rounded-3xl border-4 border-opacity-20 flex items-center justify-center overflow-hidden group"
                 style={{ borderColor: accent }}
               >
                 <div
@@ -266,7 +266,7 @@ export default function Portfolio() {
                   style={{ background: accent }}
                 ></div>
 
-                <div className="text-center relative z-10 p-4 sm:p-8">
+                <div className="text-center relative z-10 p-6 sm:p-8">
                   <div className="mb-4 relative w-32 h-32 mx-auto">
                     <img
                       src={`${process.env.PUBLIC_URL}/profile.png`}
