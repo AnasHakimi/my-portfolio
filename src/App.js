@@ -33,8 +33,8 @@ export default function Portfolio() {
     {
       id: 1,
       title: "SSM CSI Intelligence Assistant",
-      desc: "My final year project at university was developed using Unity and Vuforia, with the modeling done in Blender. ",
-      tech: ["Unity", "Vuforia", "Blender", "Adobe Illustrator"],
+      desc: "My internship project to develop an AI assistant for the SSM CSI using a LLM model from GROQ",
+      tech: ["React.js", "Python", "FastAPI", "GROQ", "Supabase", "Vercel", "Render"],
       link: "#",
       github: "#",
     },
@@ -49,18 +49,18 @@ export default function Portfolio() {
     {
       id: 3,
       title: "Kitchenware Classification System",
-      desc: "In Semester 4, my group project for the subject Mobile Programming (CSC557) required us to build a car rental app using Android Studio. ",
-      tech: ["Kotlin", "Android Studio", "Prostige", "Canva"],
-      link: "https://github.com/AnasHakimi/Car_Rental/raw/master/Preview/Login.png",
-      github: "https://github.com/AnasHakimi/Car_Rental"
+      desc: "Developed a Kitchenware Classification System using Convolutional Neural Networks (CNNs) in Python, with model training conducted in MATLAB.",
+      tech: ["Python", "MATLAB"],
+      link: "#",
+      github: "#"
     },
     {
       id: 4,
       title: "Food Preference Analysis System",
-      desc: "In Semester 4, my group project for the subject Enterprise Programming (CSC584) was developed using Eclipse IDE and XAMPP, with the real-time API integrated from www.tracking.my.",
-      tech: ["Eclipse IDE", "Apache Tomcat", "phpMyAdmin", "Java"],
-      link: "https://github.com/AnasHakimi/Package_Tracking/raw/main/PackageTracking/AIO%20package%20tracking/login.png",
-      github: "https://github.com/AnasHakimi/Package_Tracking"
+      desc: "Developed an intelligent prediction system using the K-Nearest Neighbors (KNN) algorithm to determine whether Malaysians prefer local or international cuisine",
+      tech: ["Anaconda", "Python", "Jupyter Notebook"],
+      link: "#",
+      github: "#"
     },
     {
       id: 5,
@@ -89,17 +89,17 @@ export default function Portfolio() {
     {
       id: 8,
       title: "Sneakers.Co Ecommerse Website",
-      desc: "In Semester 4, my group project for the subject Enterprise Programming (CSC584) was developed using Eclipse IDE and XAMPP, with the real-time API integrated from www.tracking.my.",
-      tech: ["Eclipse IDE", "Apache Tomcat", "phpMyAdmin", "Java"],
+      desc: "In semester 5 diploma, my group project for the subject Introduction to Web and Mobile Development (CSC264) was developed using Html, Css, Php and XAMPP",
+      tech: ["Html", "Css", "Php", "XAMPP"],
       link: "https://github.com/AnasHakimi/Package_Tracking/raw/main/PackageTracking/AIO%20package%20tracking/login.png",
       github: "https://github.com/AnasHakimi/Package_Tracking"
     }
   ];
 
   const skills = [
-    { name: "Frontend", items: ["Css", "React", "TypeScript", "Tailwind"] },
+    { name: "Frontend", items: ["Html", "Css", "React", "Tailwind"] },
     { name: "Mobile & Web Dev", items: ["Kotlin", "JavaEE", "Xampp", "PhpMyAdmin", "Html"] },
-    { name: "Game Dev", items: ["Unity", "Construct 3", "AR/VR", "Vuforia", "C#"] },
+    { name: "AI & Machine Learning", items: ["Python", "Jupyter Notebook", "MATLAB", "GROQ", "Supabase", "Vercel", "Render"] },
     { name: "Tools", items: ["Blender", "Figma", "Adobe Illustrator", "Canva"] }
   ];
 
