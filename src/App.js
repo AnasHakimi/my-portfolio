@@ -266,7 +266,7 @@ export default function Portfolio() {
                   style={{ background: accent }}
                 ></div>
 
-                <div className="text-center relative z-10 p-8">
+                <div className="text-center relative z-10 p-4 sm:p-8">
                   <div className="mb-4 relative w-32 h-32 mx-auto">
                     <img
                       src={`${process.env.PUBLIC_URL}/profile.png`}
