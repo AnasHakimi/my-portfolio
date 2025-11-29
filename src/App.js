@@ -128,7 +128,7 @@ export default function Portfolio() {
     // REPLACE THESE WITH YOUR ACTUAL EMAILJS CREDENTIALS
     // Sign up at https://www.emailjs.com/
     const SERVICE_ID = 'service_chdxijn';
-    const TEMPLATE_ID = 'template_0bsdfsa';
+    const TEMPLATE_ID = 'template_1fa8rpr';
     const PUBLIC_KEY = 'xUpJMP6C-pqC24Lyh';
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
