@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+
 import emailjs from '@emailjs/browser';
+import { motion } from "framer-motion";
 import { Mail, Github, Linkedin, ExternalLink, Code, Sun, Moon, Menu, X, ChevronDown, Sparkles } from "lucide-react";
 
 export default function Portfolio() {
@@ -150,9 +152,9 @@ export default function Portfolio() {
     >
       {/* Animated background elements */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -inset-10 opacity-10">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full blur-xl" style={{ background: accent }}></div>
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-xl" style={{ background: dark ? '#6366f1' : '#93c5fd' }}></div>
+        <div className={`absolute -inset-10 ${dark ? 'opacity-20' : 'opacity-60'} transition-opacity duration-700`}>
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full blur-3xl animate-pulse" style={{ background: accent, animationDuration: '4s' }}></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full blur-3xl animate-pulse" style={{ background: dark ? '#6366f1' : '#93c5fd', animationDuration: '7s' }}></div>
         </div>
       </div>
 
@@ -230,7 +232,12 @@ export default function Portfolio() {
         {/* Enhanced HERO */}
         <section id="home" className="min-h-[80vh] flex items-center pt-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 order-2 lg:order-1 text-center lg:text-left">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6 order-2 lg:order-1 text-center lg:text-left"
+            >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-opacity-20 text-sm">
                 <Sparkles size={16} />
                 <span>Available for employment opportunities</span>
@@ -276,9 +283,14 @@ export default function Portfolio() {
                   <Mail size={20} /> Get In Touch
                 </a>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="flex justify-center lg:justify-end order-1 lg:order-2"
+            >
               <div
                 className="relative w-72 h-auto py-10 sm:py-0 sm:w-80 sm:h-80 rounded-3xl border-4 border-opacity-20 flex items-center justify-center overflow-hidden group"
                 style={{ borderColor: accent }}
@@ -312,7 +324,7 @@ export default function Portfolio() {
                 <div className="absolute top-4 right-4 w-3 h-3 rounded-full animate-pulse" style={{ background: accent }}></div>
                 <div className="absolute bottom-6 left-6 w-2 h-2 rounded-full animate-pulse delay-300" style={{ background: accent }}></div>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           {/* Scroll indicator */}
@@ -335,10 +347,13 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {skills.map((skillGroup, index) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 key={skillGroup.name}
                 className="p-6 rounded-2xl backdrop-blur-lg bg-white bg-opacity-5 border border-opacity-10 hover:border-opacity-30 transition-all duration-300 hover:scale-105"
-                style={{ animationDelay: `${index * 100}ms` }}
               >
                 <h3 className="font-semibold text-lg mb-4" style={{ color: accent }}>{skillGroup.name}</h3>
                 <div className="space-y-2">
@@ -349,7 +364,7 @@ export default function Portfolio() {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -363,7 +378,11 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <div
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 key={project.id}
                 className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white bg-opacity-5 border border-opacity-10 hover:border-opacity-30 transition-all duration-500 hover:scale-105"
               >
@@ -405,7 +424,7 @@ export default function Portfolio() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -418,7 +437,13 @@ export default function Portfolio() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="space-y-6"
+            >
               <div className="p-6 rounded-2xl backdrop-blur-lg bg-white bg-opacity-5 border border-opacity-10">
                 <h3 className="font-semibold text-lg mb-4">Get in touch</h3>
                 <div className="space-y-4">
@@ -447,9 +472,17 @@ export default function Portfolio() {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <form ref={form} className="space-y-4" onSubmit={sendEmail}>
+            <motion.form
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              ref={form}
+              className="space-y-4"
+              onSubmit={sendEmail}
+            >
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
                   type="text"
@@ -479,7 +512,7 @@ export default function Portfolio() {
               >
                 Send Message
               </button>
-            </form>
+            </motion.form>
           </div>
         </section>
 
