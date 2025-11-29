@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import emailjs from '@emailjs/browser';
 import { Mail, Github, Linkedin, ExternalLink, Code, Sun, Moon, Menu, X, ChevronDown, Sparkles } from "lucide-react";
 
 export default function Portfolio() {
   const [dark, setDark] = useState(true);
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const form = useRef();
 
   const accent = "#fd7337";
   const gradient = dark
@@ -118,6 +120,26 @@ export default function Portfolio() {
       element.scrollIntoView({ behavior: "smooth" });
       setOpen(false);
     }
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // REPLACE THESE WITH YOUR ACTUAL EMAILJS CREDENTIALS
+    // Sign up at https://www.emailjs.com/
+    const SERVICE_ID = 'service_chdxijn';
+    const TEMPLATE_ID = 'template_0bsdfsa';
+    const PUBLIC_KEY = 'xUpJMP6C-pqC24Lyh';
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
+      .then((result) => {
+        console.log(result.text);
+        alert("Message sent successfully!");
+        e.target.reset();
+      }, (error) => {
+        console.log(error.text);
+        alert("Failed to send message. Please check your EmailJS credentials.");
+      });
   };
 
   return (
@@ -427,22 +449,25 @@ export default function Portfolio() {
               </div>
             </div>
 
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form ref={form} className="space-y-4" onSubmit={sendEmail}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
                   type="text"
+                  name="user_name"
                   placeholder="Your name"
                   className="p-4 rounded-xl backdrop-blur-lg bg-white bg-opacity-5 border border-opacity-10 focus:border-opacity-40 transition-all focus:scale-105"
                   required
                 />
                 <input
                   type="email"
+                  name="user_email"
                   placeholder="Your email"
                   className="p-4 rounded-xl backdrop-blur-lg bg-white bg-opacity-5 border border-opacity-10 focus:border-opacity-40 transition-all focus:scale-105"
                   required
                 />
               </div>
               <textarea
+                name="message"
                 placeholder="Your message"
                 rows={6}
                 className="p-4 rounded-xl backdrop-blur-lg bg-white bg-opacity-5 border border-opacity-10 focus:border-opacity-40 transition-all focus:scale-105 w-full"
