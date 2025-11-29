@@ -206,7 +206,7 @@ export default function Portfolio() {
         )}
 
         {/* Enhanced HERO */}
-        <section id="home" className="min-h-screen flex items-center pt-16">
+        <section id="home" className="min-h-[80vh] flex items-center pt-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 order-2 lg:order-1 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-opacity-20 text-sm">
