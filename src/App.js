@@ -214,7 +214,7 @@ export default function Portfolio() {
   const contact = {
     name: "Muhammad Anas Hakimi",
     tagline: "Tech Enthusiast & Creative Developer",
-    bio: "Former UiTM Jasin, Melaka, Bachelor in Computer Science (Hons) Multimedia Computing. Currently doing internship at SSM (Suruhanjaya Syarikat Malaysia). Passionate about creating engaging digital experiences.",
+    bio: "A passionate developer with a strong interest in frontend and backend development. I enjoy turning ideas into functional, user-friendly digital experiences and constantly explore new technologies to improve my craft. Always eager to learn, build, and create meaningful solutions.",
     email: "hakimi11102@gmail.com",
     github: "https://github.com/AnasHakimi",
     linkedin: "https://www.linkedin.com/in/anashakimi/",
@@ -416,7 +416,7 @@ export default function Portfolio() {
                   <div className="mt-2 text-sm opacity-70">Frontend • Mobile • Game Dev</div>
 
                   <div className="mt-6 flex justify-center gap-2">
-                    {["React", "Kotlin", "Unity"].map((tech) => (
+                    {["Python", "React", "Java"].map((tech) => (
                       <span key={tech} className="text-xs px-2 py-1 rounded-full border border-opacity-20">
                         {tech}
                       </span>
