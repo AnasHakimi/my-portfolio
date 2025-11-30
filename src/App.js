@@ -139,7 +139,7 @@ export default function Portfolio() {
     {
       id: 1,
       title: "SSM CSI Intelligence Assistant",
-      desc: "My internship project to develop an AI assistant for the SSM CSI using a LLM model from GROQ",
+      desc: "Developed an AI assistant chatbot for SSM’s CSI data using an LLM model from GROQ as part of my internship project at Suruhanjaya Syarikat Malaysia.",
       tech: ["React.js", "Python", "FastAPI", "GROQ", "Supabase", "Vercel", "Render"],
       images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/1/home.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/1/chat.png?raw=true"],
       github: "#",
@@ -148,7 +148,7 @@ export default function Portfolio() {
     {
       id: 2,
       title: "Waste Recycling AR Educational Game",
-      desc: "My final year project at university was developed using Unity and Vuforia, with the modeling done in Blender. ",
+      desc: "Developed an AR educational game for primary school students to learn about waste recycling using Unity and the Vuforia engine as part of my final year project at university.",
       tech: ["Unity", "Vuforia", "Blender", "Adobe Illustrator"],
       images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/home.jpg?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/1.jpg?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/2.jpg?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/4.jpg?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/3.jpg?raw=true"],
       github: "#",
@@ -173,7 +173,7 @@ export default function Portfolio() {
     {
       id: 5,
       title: "Virtual Shopping Simulation 3D Game",
-      desc: "In Semester 5, my group project for the subject Virtual Reality (CSC573) was a virtual shopping mini-game featuring an interactive UI/UX. ",
+      desc: "Developed a virtual shopping simulation game using Unity as part of a group project for the Virtual Reality (CSC573) course in Semester 5.",
       tech: ["Unity", "C#", "Blender", "Canva"],
       images: ["https://github.com/AnasHakimi/First_Person_Shopping_Simulator/blob/main/Preview/home.png?raw=true", "https://github.com/AnasHakimi/First_Person_Shopping_Simulator/blob/main/Preview/coin.png?raw=true", "https://github.com/AnasHakimi/Shopping_Simulation/raw/main/Preview/2.png", "https://github.com/AnasHakimi/Shopping_Simulation/raw/main/Preview/1.png"],
       github: "https://github.com/AnasHakimi/Shopping_Simulation",
@@ -181,7 +181,7 @@ export default function Portfolio() {
     {
       id: 6,
       title: "Car Rental Mobile Application",
-      desc: "In Semester 4, my group project for the subject Mobile Programming (CSC557) required us to build a car rental app using Android Studio. ",
+      desc: "Developed a car rental mobile application using Android Studio as part of a group project for the Mobile Programming (CSC557) course in Semester 4.",
       tech: ["Kotlin", "Android Studio", "Prostige", "Canva"],
       images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/4/7.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/4/8.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/4/9.png?raw=true"],
       github: "https://github.com/AnasHakimi/Car_Rental"
@@ -189,7 +189,7 @@ export default function Portfolio() {
     {
       id: 7,
       title: "Courier Management System",
-      desc: "In Semester 4, my group project for the subject Enterprise Programming (CSC584) was developed using Eclipse IDE and XAMPP, with the real-time API integrated from www.tracking.my.",
+      desc: "Developed a courier management system using Eclipse IDE and XAMPP as part of a group project for the Enterprise Programming (CSC584) course in Semester 4. The system features a real-time API integrated from www.tracking.my.",
       tech: ["Eclipse IDE", "Apache Tomcat", "phpMyAdmin", "Java"],
       images: ["https://github.com/AnasHakimi/Package_Tracking/raw/main/PackageTracking/AIO%20package%20tracking/login.png", "https://github.com/AnasHakimi/Courier_Management_System/blob/main/PackageTracking/AIO%20package%20tracking/1.png?raw=true", "https://github.com/AnasHakimi/Courier_Management_System/blob/main/PackageTracking/AIO%20package%20tracking/dashboard.png?raw=true", "https://github.com/AnasHakimi/Courier_Management_System/blob/main/PackageTracking/AIO%20package%20tracking/admin%20dashboard.png?raw=true"],
       github: "https://github.com/AnasHakimi/Package_Tracking"
@@ -197,7 +197,7 @@ export default function Portfolio() {
     {
       id: 8,
       title: "Sneakers.Co Ecommerse Website",
-      desc: "In semester 5 diploma, my group project for the subject Introduction to Web and Mobile Development (CSC264) was developed using Html, Css, Php and XAMPP",
+      desc: "Developed an e-commerce website for sneakers shopping using Html, Css, Php and XAMPP as part of a group project for the Introduction to Web and Mobile Development (CSC264) course in my diploma Semester 5.",
       tech: ["Html", "Css", "Php", "XAMPP"],
       images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/3/home.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/3/productpage.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/3/page.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/3/about.png?raw=true"],
       github: "https://github.com/AnasHakimi/Package_Tracking"
@@ -205,9 +205,9 @@ export default function Portfolio() {
   ];
 
   const skills = [
-    { name: "Frontend", items: ["Html", "Css", "React", "Tailwind"] },
-    { name: "Mobile & Web Dev", items: ["Kotlin", "JavaEE", "Xampp", "PhpMyAdmin", "Html"] },
-    { name: "AI & Machine Learning", items: ["Python", "Jupyter Notebook", "MATLAB", "GROQ", "Supabase", "Vercel", "Render"] },
+    { name: "Frontend", items: ["Html", "Css", "React.js", "Figma"] },
+    { name: "Mobile & Web Dev", items: ["Kotlin", "JavaEE", "Xampp", "PhpMyAdmin"] },
+    { name: "AI & Machine Learning", items: ["Python", "Jupyter Notebook", "MATLAB", "GROQ"] },
     { name: "Tools", items: ["Blender", "Figma", "Adobe Illustrator", "Canva"] }
   ];
 
