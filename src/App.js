@@ -192,7 +192,7 @@ export default function Portfolio() {
       desc: "Developed a courier management system using Eclipse IDE and XAMPP as part of a group project for the Enterprise Programming (CSC584) course in Semester 4. The system features a real-time API integrated from www.tracking.my.",
       tech: ["Eclipse IDE", "Apache Tomcat", "phpMyAdmin", "Java"],
       images: ["https://github.com/AnasHakimi/Package_Tracking/raw/main/PackageTracking/AIO%20package%20tracking/login.png", "https://github.com/AnasHakimi/Courier_Management_System/blob/main/PackageTracking/AIO%20package%20tracking/1.png?raw=true", "https://github.com/AnasHakimi/Courier_Management_System/blob/main/PackageTracking/AIO%20package%20tracking/dashboard.png?raw=true", "https://github.com/AnasHakimi/Courier_Management_System/blob/main/PackageTracking/AIO%20package%20tracking/admin%20dashboard.png?raw=true"],
-      github: "https://github.com/AnasHakimi/Package_Tracking"
+      github: "https://github.com/AnasHakimi/Courier_Management_System"
     },
     {
       id: 8,
@@ -200,7 +200,7 @@ export default function Portfolio() {
       desc: "Developed an e-commerce website for sneakers shopping using Html, Css, Php and XAMPP as part of a group project for the Introduction to Web and Mobile Development (CSC264) course in my diploma Semester 5.",
       tech: ["Html", "Css", "Php", "XAMPP"],
       images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/3/home.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/3/productpage.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/3/page.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/3/about.png?raw=true"],
-      github: "https://github.com/AnasHakimi/Package_Tracking"
+      github: "https://github.com/AnasHakimi/Sneakers_Co_Ecommerce"
     }
   ];
 
