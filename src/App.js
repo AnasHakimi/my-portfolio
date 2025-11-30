@@ -183,7 +183,7 @@ export default function Portfolio() {
       title: "Car Rental Mobile Application",
       desc: "In Semester 4, my group project for the subject Mobile Programming (CSC557) required us to build a car rental app using Android Studio. ",
       tech: ["Kotlin", "Android Studio", "Prostige", "Canva"],
-      images: ["https://github.com/AnasHakimi/Car_Rental/raw/master/Preview/Login.png", "https://github.com/AnasHakimi/Car_Rental/raw/master/Preview/Home.png"],
+      images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/4/7.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/4/8.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/4/9.png?raw=true"],
       github: "https://github.com/AnasHakimi/Car_Rental"
     },
     {
