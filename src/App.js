@@ -199,7 +199,7 @@ export default function Portfolio() {
       title: "Sneakers.Co Ecommerse Website",
       desc: "In semester 5 diploma, my group project for the subject Introduction to Web and Mobile Development (CSC264) was developed using Html, Css, Php and XAMPP",
       tech: ["Html", "Css", "Php", "XAMPP"],
-      images: ["https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80&w=800"],
+      images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/3/home.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/3/productpage.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/3/page.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/3/about.png?raw=true"],
       github: "https://github.com/AnasHakimi/Package_Tracking"
     }
   ];
