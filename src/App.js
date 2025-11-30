@@ -150,7 +150,7 @@ export default function Portfolio() {
       title: "Waste Recycling AR Educational Game",
       desc: "My final year project at university was developed using Unity and Vuforia, with the modeling done in Blender. ",
       tech: ["Unity", "Vuforia", "Blender", "Adobe Illustrator"],
-      images: ["https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800", "https://images.unsplash.com/photo-1592478411213-61535fdd861d?auto=format&fit=crop&q=80&w=800"],
+      images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/home.jpg?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/1.jpg?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/2.jpg?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/4.jpg?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/3.jpg?raw=true"],
       github: "#",
       featured: true
     },
@@ -159,7 +159,7 @@ export default function Portfolio() {
       title: "Kitchenware Classification System",
       desc: "Developed a Kitchenware Classification System using Convolutional Neural Networks (CNNs) in Python, with model training conducted in MATLAB.",
       tech: ["Python", "MATLAB"],
-      images: ["https://images.unsplash.com/photo-1556910103-1c02745a30bf?auto=format&fit=crop&q=80&w=800"],
+      images: ["https://www.shutterstock.com/image-photo/set-different-kitchenware-on-white-260nw-2312838827.jpg"],
       github: "#"
     },
     {
