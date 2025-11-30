@@ -1,8 +1,110 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import emailjs from '@emailjs/browser';
-import { motion } from "framer-motion";
-import { Mail, Github, Linkedin, ExternalLink, Code, Sun, Moon, Menu, X, ChevronDown, Sparkles } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Mail, Github, Linkedin, ExternalLink, Code, Sun, Moon, Menu, X, ChevronDown, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+
+const ProjectCard = ({ project, index, accent }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const nextSlide = (e) => {
+    e.stopPropagation();
+    setCurrentSlide((prev) => (prev + 1) % project.images.length);
+  };
+
+  const prevSlide = (e) => {
+    e.stopPropagation();
+    setCurrentSlide((prev) => (prev - 1 + project.images.length) % project.images.length);
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white bg-opacity-5 border border-opacity-10 hover:border-opacity-30 transition-all duration-500 hover:scale-105 flex flex-col"
+    >
+      {/* Image Carousel */}
+      <div className="relative h-48 w-full overflow-hidden bg-black/20">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentSlide}
+            src={project.images[currentSlide]}
+            alt={project.title}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="w-full h-full object-cover"
+          />
+        </AnimatePresence>
+
+        {project.images.length > 1 && (
+          <>
+            <button
+              onClick={prevSlide}
+              className="absolute left-2 top-1/2 -translate-y-1/2 p-1 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors z-10"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors z-10"
+            >
+              <ChevronRight size={20} />
+            </button>
+
+            {/* Dots */}
+            <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-10">
+              {project.images.map((_, idx) => (
+                <div
+                  key={idx}
+                  className={`w-1.5 h-1.5 rounded-full transition-colors ${idx === currentSlide ? 'bg-white' : 'bg-white/50'}`}
+                />
+              ))}
+            </div>
+          </>
+        )}
+
+        {project.featured && (
+          <div className="absolute top-4 right-4 z-10">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold shadow-lg" style={{ background: accent, color: 'white' }}>
+              Featured
+            </span>
+          </div>
+        )}
+      </div>
+
+      <div className="p-6 flex flex-col flex-grow">
+        <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
+        <p className="opacity-80 mb-4 leading-relaxed flex-grow">{project.desc}</p>
+
+        <div className="flex flex-wrap gap-2 mb-6">
+          {project.tech.map((tech) => (
+            <span
+              key={tech}
+              className="px-3 py-1 rounded-full text-sm border border-opacity-20"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex gap-4 mt-auto">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 px-4 py-2 rounded-lg border border-opacity-20 hover:border-opacity-40 transition-all hover:scale-105 w-full justify-center"
+          >
+            <Github size={16} /> GitHub
+          </a>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 export default function Portfolio() {
   const [dark, setDark] = useState(true);
@@ -39,23 +141,25 @@ export default function Portfolio() {
       title: "SSM CSI Intelligence Assistant",
       desc: "My internship project to develop an AI assistant for the SSM CSI using a LLM model from GROQ",
       tech: ["React.js", "Python", "FastAPI", "GROQ", "Supabase", "Vercel", "Render"],
-      link: "#",
+      images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800", "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800"],
       github: "#",
+      featured: true
     },
     {
       id: 2,
       title: "Waste Recycling AR Educational Game",
       desc: "My final year project at university was developed using Unity and Vuforia, with the modeling done in Blender. ",
       tech: ["Unity", "Vuforia", "Blender", "Adobe Illustrator"],
-      link: "#",
+      images: ["https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=800", "https://images.unsplash.com/photo-1592478411213-61535fdd861d?auto=format&fit=crop&q=80&w=800"],
       github: "#",
+      featured: true
     },
     {
       id: 3,
       title: "Kitchenware Classification System",
       desc: "Developed a Kitchenware Classification System using Convolutional Neural Networks (CNNs) in Python, with model training conducted in MATLAB.",
       tech: ["Python", "MATLAB"],
-      link: "#",
+      images: ["https://images.unsplash.com/photo-1556910103-1c02745a30bf?auto=format&fit=crop&q=80&w=800"],
       github: "#"
     },
     {
@@ -63,15 +167,15 @@ export default function Portfolio() {
       title: "Food Preference Analysis System",
       desc: "Developed an intelligent prediction system using the K-Nearest Neighbors (KNN) algorithm to determine whether Malaysians prefer local or international cuisine",
       tech: ["Anaconda", "Python", "Jupyter Notebook"],
-      link: "#",
+      images: ["https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800"],
       github: "#"
     },
     {
       id: 5,
-      title: "Virtual Shopping Simulation 3D Game using Unity",
+      title: "Virtual Shopping Simulation 3D Game",
       desc: "In Semester 5, my group project for the subject Virtual Reality (CSC573) was a virtual shopping mini-game featuring an interactive UI/UX. ",
       tech: ["Unity", "C#", "Blender", "Canva"],
-      link: "https://github.com/AnasHakimi/Shopping_Simulation/raw/main/Preview/2.png",
+      images: ["https://github.com/AnasHakimi/First_Person_Shopping_Simulator/blob/main/Preview/home.png?raw=true", "https://github.com/AnasHakimi/First_Person_Shopping_Simulator/blob/main/Preview/coin.png?raw=true", "https://github.com/AnasHakimi/Shopping_Simulation/raw/main/Preview/2.png", "https://github.com/AnasHakimi/Shopping_Simulation/raw/main/Preview/1.png"],
       github: "https://github.com/AnasHakimi/Shopping_Simulation",
     },
     {
@@ -79,7 +183,7 @@ export default function Portfolio() {
       title: "Car Rental Mobile Application",
       desc: "In Semester 4, my group project for the subject Mobile Programming (CSC557) required us to build a car rental app using Android Studio. ",
       tech: ["Kotlin", "Android Studio", "Prostige", "Canva"],
-      link: "https://github.com/AnasHakimi/Car_Rental/raw/master/Preview/Login.png",
+      images: ["https://github.com/AnasHakimi/Car_Rental/raw/master/Preview/Login.png", "https://github.com/AnasHakimi/Car_Rental/raw/master/Preview/Home.png"],
       github: "https://github.com/AnasHakimi/Car_Rental"
     },
     {
@@ -87,7 +191,7 @@ export default function Portfolio() {
       title: "Courier Management System",
       desc: "In Semester 4, my group project for the subject Enterprise Programming (CSC584) was developed using Eclipse IDE and XAMPP, with the real-time API integrated from www.tracking.my.",
       tech: ["Eclipse IDE", "Apache Tomcat", "phpMyAdmin", "Java"],
-      link: "https://github.com/AnasHakimi/Package_Tracking/raw/main/PackageTracking/AIO%20package%20tracking/login.png",
+      images: ["https://github.com/AnasHakimi/Package_Tracking/raw/main/PackageTracking/AIO%20package%20tracking/login.png", "https://github.com/AnasHakimi/Courier_Management_System/blob/main/PackageTracking/AIO%20package%20tracking/1.png?raw=true", "https://github.com/AnasHakimi/Courier_Management_System/blob/main/PackageTracking/AIO%20package%20tracking/dashboard.png?raw=true", "https://github.com/AnasHakimi/Courier_Management_System/blob/main/PackageTracking/AIO%20package%20tracking/admin%20dashboard.png?raw=true"],
       github: "https://github.com/AnasHakimi/Package_Tracking"
     },
     {
@@ -95,7 +199,7 @@ export default function Portfolio() {
       title: "Sneakers.Co Ecommerse Website",
       desc: "In semester 5 diploma, my group project for the subject Introduction to Web and Mobile Development (CSC264) was developed using Html, Css, Php and XAMPP",
       tech: ["Html", "Css", "Php", "XAMPP"],
-      link: "https://github.com/AnasHakimi/Package_Tracking/raw/main/PackageTracking/AIO%20package%20tracking/login.png",
+      images: ["https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80&w=800"],
       github: "https://github.com/AnasHakimi/Package_Tracking"
     }
   ];
@@ -378,53 +482,7 @@ export default function Portfolio() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {projects.map((project, index) => (
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                key={project.id}
-                className="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white bg-opacity-5 border border-opacity-10 hover:border-opacity-30 transition-all duration-500 hover:scale-105"
-              >
-                {project.featured && (
-                  <div className="absolute top-4 right-4 z-10">
-                    <span className="px-3 py-1 rounded-full text-xs font-semibold" style={{ background: accent, color: 'white' }}>
-                      Featured
-                    </span>
-                  </div>
-                )}
-
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
-                  <p className="opacity-80 mb-4 leading-relaxed">{project.desc}</p>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.tech.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 rounded-full text-sm border border-opacity-20"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex gap-4">
-                    <a
-                      href={project.link}
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg border border-opacity-20 hover:border-opacity-40 transition-all hover:scale-105"
-                    >
-                      <ExternalLink size={16} /> Preview
-                    </a>
-                    <a
-                      href={project.github}
-                      className="flex items-center gap-2 px-4 py-2 rounded-lg border border-opacity-20 hover:border-opacity-40 transition-all hover:scale-105"
-                    >
-                      <Github size={16} /> GitHub
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
+              <ProjectCard key={project.id} project={project} index={index} accent={accent} />
             ))}
           </div>
         </section>
