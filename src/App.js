@@ -141,7 +141,7 @@ export default function Portfolio() {
       title: "SSM CSI Intelligence Assistant",
       desc: "My internship project to develop an AI assistant for the SSM CSI using a LLM model from GROQ",
       tech: ["React.js", "Python", "FastAPI", "GROQ", "Supabase", "Vercel", "Render"],
-      images: ["https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800", "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&q=80&w=800"],
+      images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/1/home.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/1/chat.png?raw=true"],
       github: "#",
       featured: true
     },
