@@ -167,8 +167,8 @@ export default function Portfolio() {
       title: "Food Preference Analysis System",
       desc: "Developed an intelligent prediction system using the K-Nearest Neighbors (KNN) algorithm to determine whether Malaysians prefer local or international cuisine",
       tech: ["Anaconda", "Python", "Jupyter Notebook"],
-      images: ["https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800"],
-      github: "#"
+      images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/5/home1.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/5/home3.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/5/home2.png?raw=true"],
+      github: "https://github.com/AnasHakimi/Food_preferences_system"
     },
     {
       id: 5,
