@@ -159,7 +159,7 @@ export default function Portfolio() {
       title: "Kitchenware Classification System",
       desc: "Developed a Kitchenware Classification System using Convolutional Neural Networks (CNNs) in Python, with model training conducted in MATLAB.",
       tech: ["Python", "MATLAB"],
-      images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/6/home1.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/6/home2.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/6/home3.png?raw=true"],
+      images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/6/home3.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/6/home1.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/6/home2.png?raw=true"],
       github: "https://github.com/AnasHakimi/Kitchenware_classify"
     },
     {
