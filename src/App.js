@@ -142,7 +142,7 @@ export default function Portfolio() {
       desc: "Developed an AI assistant chatbot for SSM’s CSI data using an LLM model from GROQ as part of my internship project at Suruhanjaya Syarikat Malaysia.",
       tech: ["React.js", "Python", "FastAPI", "GROQ", "Supabase", "Vercel", "Render"],
       images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/1/home.png?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/1/chat.png?raw=true"],
-      github: "#",
+      github: "https://github.com/AnasHakimi/habibiCSI",
       featured: true
     },
     {
@@ -151,7 +151,7 @@ export default function Portfolio() {
       desc: "Developed an AR educational game for primary school students to learn about waste recycling using Unity and the Vuforia engine as part of my final year project at university.",
       tech: ["Unity", "Vuforia", "Blender", "Adobe Illustrator"],
       images: ["https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/home.jpg?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/1.jpg?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/2.jpg?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/4.jpg?raw=true", "https://github.com/AnasHakimi/my-portfolio/blob/main/src/image/2/3.jpg?raw=true"],
-      github: "#",
+      github: "https://github.com/AnasHakimi/AR_waste_recyclinggame",
       featured: true
     },
     {
