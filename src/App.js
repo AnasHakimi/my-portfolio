@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 import emailjs from '@emailjs/browser';
 import { motion, AnimatePresence } from "framer-motion";
+import { TypeAnimation } from 'react-type-animation';
 import { Mail, Github, Linkedin, ExternalLink, Code, Sun, Moon, Menu, X, ChevronDown, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
 
 const ProjectCard = ({ project, index, accent }) => {
@@ -205,15 +206,15 @@ export default function Portfolio() {
   ];
 
   const skills = [
-    { name: "Frontend", items: ["Html", "Css", "React.js", "Figma"] },
-    { name: "Mobile & Web Dev", items: ["Kotlin", "JavaEE", "Xampp", "PhpMyAdmin"] },
-    { name: "AI & Machine Learning", items: ["Python", "Jupyter Notebook", "MATLAB", "GROQ"] },
-    { name: "Tools", items: ["Blender", "Figma", "Adobe Illustrator", "Canva"] }
+    { name: "Frontend", items: ["HTML", "CSS", "JavaScript", "React.js", "Tailwind CSS"] },
+    { name: "Mobile & Web Dev", items: ["PHP", "Python", "MySQL", "Java", "Kotlin"] },
+    { name: "AI & Machine Learning", items: ["Python", "Pandas", "Matplotlib", "Jupyter Notebook", "MATLAB"] },
+    { name: "Tools", items: ["GitHub", "Supabase", "Android Studio", "VS Code", "Antigravity"] }
   ];
 
   const contact = {
     name: "Muhammad Anas Hakimi",
-    tagline: "Tech Enthusiast & Creative Developer",
+    tagline: "Creative Developer & Tech Enthusiast",
     bio: "A passionate developer with a strong interest in frontend and backend development. I enjoy turning ideas into functional, user-friendly digital experiences and constantly explore new technologies to improve my craft. Always eager to learn, build, and create meaningful solutions.",
     email: "hakimi11102@gmail.com",
     github: "https://github.com/AnasHakimi",
@@ -270,8 +271,7 @@ export default function Portfolio() {
             className="font-bold text-xl bg-clip-text text-transparent"
             style={{ backgroundImage: `linear-gradient(45deg, ${accent}, ${dark ? '#818cf8' : '#3b82f6'})` }}
           >
-            {contact.name.split(' ')[1]}
-            <span className="ml-1 opacity-70">/ Kimi</span>
+            <span className="ml-1 opacity-70">Single</span>
           </a>
 
           <nav className="hidden md:flex gap-8 items-center">
@@ -349,9 +349,21 @@ export default function Portfolio() {
 
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
                 Hi, I'm{" "}
-                <span className="bg-clip-text text-transparent" style={{ backgroundImage: `linear-gradient(45deg, ${accent}, ${dark ? '#818cf8' : '#3b82f6'})` }}>
-                  {contact.name.split(' ')[1]}
-                </span>
+                <TypeAnimation
+                  sequence={[
+                    contact.name.split(' ')[1],
+                    2000,
+                    'Kimi',
+                    2000,
+                    'Masbro',
+                    2000
+                  ]}
+                  wrapper="span"
+                  speed={10}
+                  className="bg-clip-text text-transparent"
+                  style={{ backgroundImage: `linear-gradient(45deg, ${accent}, ${dark ? '#818cf8' : '#3b82f6'})`, display: 'inline-block' }}
+                  repeat={Infinity}
+                />
               </h1>
 
               <p className="text-xl sm:text-2xl font-medium opacity-90" style={{ color: accent }}>
@@ -413,10 +425,10 @@ export default function Portfolio() {
                     />
                   </div>
                   <div className="font-semibold text-lg">Anas Hakimi</div>
-                  <div className="mt-2 text-sm opacity-70">Frontend • Mobile • Game Dev</div>
+                  <div className="mt-2 text-sm opacity-70">@anaskimii</div>
 
                   <div className="mt-6 flex justify-center gap-2">
-                    {["Python", "React", "Java"].map((tech) => (
+                    {["Javascript", "Python", "C#"].map((tech) => (
                       <span key={tech} className="text-xs px-2 py-1 rounded-full border border-opacity-20">
                         {tech}
                       </span>
