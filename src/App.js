@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import emailjs from '@emailjs/browser';
 import { motion, AnimatePresence } from "framer-motion";
 import { TypeAnimation } from 'react-type-animation';
-import { Mail, Github, Linkedin, ExternalLink, Code, Sun, Moon, Menu, X, ChevronDown, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
+import { Mail, Github, Linkedin, Sun, Moon, Menu, X, ChevronDown, Sparkles, ChevronLeft, ChevronRight } from "lucide-react";
 
 const ProjectCard = ({ project, index, accent }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -266,13 +266,14 @@ export default function Portfolio() {
       <div className="relative max-w-6xl mx-auto px-4 py-6 z-10">
         {/* Enhanced NAV */}
         <header className="flex items-center justify-between py-4">
-          <a
-            href="#"
+          <button
+            type="button"
+            onClick={() => scrollToSection('home')}
             className="font-bold text-xl bg-clip-text text-transparent"
             style={{ backgroundImage: `linear-gradient(45deg, ${accent}, ${dark ? '#818cf8' : '#3b82f6'})` }}
           >
             <span className="ml-1 opacity-70">Single</span>
-          </a>
+          </button>
 
           <nav className="hidden md:flex gap-8 items-center">
             {["home", "projects", "skills", "contact"].map((item) => (
